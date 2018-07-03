@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDB0706C-B619-4A4C-B965-951AF6175D2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dorp.FrondEnd.Forms</RootNamespace>
+    <AssemblyName>Dorp.FrondEnd.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerCheck.cs" />
+    <Compile Include="Forms\Chauffeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chauffeur.Designer.cs">
+      <DependentUpon>Chauffeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Klant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Klant.Designer.cs">
+      <DependentUpon>Klant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Planner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Planner.Designer.cs">
+      <DependentUpon>Planner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AddCard.png" />
+    <Content Include="Images\adduser.png" />
+    <Content Include="Images\Card.png" />
+    <Content Include="Images\Checkout-Card.png" />
+    <Content Include="Images\Confirm.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\Next.png" />
+    <Content Include="Images\password.png" />
+    <Content Include="Images\Planned.png" />
+    <Content Include="Images\Unplanned.png" />
+    <Content Include="Images\User.jpg" />
+    <Content Include="Images\User.png" />
+    <Content Include="Images\Warning.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Unplanned.png" />
+    <None Include="Resources\Planned.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\Confirm.png" />
+    <None Include="Resources\Checkout-Card.png" />
+    <None Include="Resources\Card.png" />
+    <None Include="Resources\adduser.png" />
+    <None Include="Resources\AddCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dorp.Data\Dorp.Data.csproj">
+      <Project>{1b7e498b-8d2f-4733-84d3-369b298e0395}</Project>
+      <Name>Dorp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

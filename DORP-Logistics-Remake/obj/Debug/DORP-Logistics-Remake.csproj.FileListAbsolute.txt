@@ -1,0 +1,7 @@
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\bin\Debug\DORP-Logistics-Remake.exe.config
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\bin\Debug\DORP-Logistics-Remake.exe
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\bin\Debug\DORP-Logistics-Remake.pdb
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\obj\Debug\DORP-Logistics-Remake.csprojAssemblyReference.cache
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\obj\Debug\DORP-Logistics-Remake.csproj.CoreCompileInputs.cache
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\obj\Debug\DORP-Logistics-Remake.exe
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\DORP-Logistics-Remake\obj\Debug\DORP-Logistics-Remake.pdb

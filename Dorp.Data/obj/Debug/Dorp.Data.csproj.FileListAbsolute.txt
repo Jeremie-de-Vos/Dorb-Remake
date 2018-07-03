@@ -1,0 +1,11 @@
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\Dorp.Data.dll
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\Dorp.Data.pdb
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\Google.Protobuf.dll
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\MySql.Data.dll
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\Google.Protobuf.xml
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\bin\Debug\MySql.Data.xml
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\obj\Debug\Dorp.Data.csproj.CoreCompileInputs.cache
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\obj\Debug\Dorp.Data.csproj.CopyComplete
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\obj\Debug\Dorp.Data.dll
+c:\users\jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\obj\Debug\Dorp.Data.pdb
+C:\Users\Jeremie\source\repos\DORP-Logistics-Remake\Dorp.Data\obj\Debug\Dorp.Data.csprojAssemblyReference.cache
