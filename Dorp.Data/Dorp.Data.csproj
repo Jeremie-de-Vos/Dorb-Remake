@@ -58,7 +58,6 @@
     <Compile Include="DataClasses\Account\CustomerRoll.cs" />
     <Compile Include="DataClasses\Account\RegisterData.cs" />
     <Compile Include="DataClasses\Account\UserRollPlayData.cs" />
-    <Compile Include="DataClasses\Customer\CustomerData.cs" />
     <Compile Include="DataClasses\Database\DatabaseData.cs" />
     <Compile Include="DataClasses\Account\LoginMatchOptions.cs" />
     <Compile Include="DataClasses\Account\UserRollplays.cs" />
@@ -77,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
+    <Folder Include="DataClasses\Customer\" />
     <Folder Include="DataClasses\Order\" />
     <Folder Include="DataClasses\Ride\" />
     <Folder Include="Helpers\" />

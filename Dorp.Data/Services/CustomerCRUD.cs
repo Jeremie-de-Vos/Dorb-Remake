@@ -1,20 +1,15 @@
 ﻿using Dorp.Data.DataClasses.Account;
-using Dorp.Data.DataClasses.Driver;
 using Dorp.Data.DataRepository;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dorp.Data.Services
 {
     public class CustomerCRUD
     {
         //Insert a new Driver to the database
-        public void Insert(CustomerData CustomerData)
+        public void Insert(CustomerData customerdata)
         {
             //Create Connection
             MySqlConnection con = DatabaseConfig.GetConnection();
@@ -23,19 +18,28 @@ namespace Dorp.Data.Services
             try
             {
                 //Build MySQLcommand
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO `klanten`(`klant_id`, `voornaam`, `tussenvoegsel`, `achternaam`, ` geboortedatum`, `email`, ` telefoonNr`, ` postcode`, ` straatnaam`, ` huisNr`, ` plaats`, ` land`, `bedrijf_particulier`, ` iban_nr`, `wachtwoord`) " +
-                    "VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14],[value-15]))", con);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO `klanten`(" +
+                    "`klant_id`, `voornaam`, `tussenvoegsel`, `achternaam`, ` geboortedatum`, `email`, ` telefoonNr`, ` postcode`, ` straatnaam`, ` huisNr`, ` plaats`, ` land`, `bedrijf_particulier`, ` iban_nr`, `wachtwoord`) " +
+                    "VALUES (ID,FirstName,Insertion,LastName,DayOfBirth,Email,TelephoneNumber,PostalCode,StreetName,AdressNumber,Residence,Country,PrivateCompany,IBAN,Password))", con);
 
                 //Create Parameters
-                cmd.Parameters.AddWithValue("ID", CustomerData.ID);
-                cmd.Parameters.AddWithValue("FirstName", CustomerData.FirstName);
-                cmd.Parameters.AddWithValue("Insertion", CustomerData.Insertion);
-                cmd.Parameters.AddWithValue("LastName", CustomerData.LastName);
-                cmd.Parameters.AddWithValue("KindLicense", CustomerData.KindLicense);
-                cmd.Parameters.AddWithValue("LicenseNationalitie", CustomerData.LicenseNationalitie);
-                cmd.Parameters.AddWithValue("BusinessDays", CustomerData.BusinessDays);
-                cmd.Parameters.AddWithValue("Username", CustomerData.Username);
-                cmd.Parameters.AddWithValue("Password", CustomerData.Password);
+                cmd.Parameters.AddWithValue("ID", customerdata.ID);
+                cmd.Parameters.AddWithValue("FirstName", customerdata.Firstname);
+                cmd.Parameters.AddWithValue("Insertion", customerdata.Insertion);
+                cmd.Parameters.AddWithValue("LastName", customerdata.LastName);
+                cmd.Parameters.AddWithValue("DayOfBirth", customerdata.DayOfBirth);
+                cmd.Parameters.AddWithValue("Email", customerdata.Email);
+                cmd.Parameters.AddWithValue("TelephoneNumber", customerdata.TelephoneNumber);
+                cmd.Parameters.AddWithValue("PrivateCompany", customerdata.CustomerRoll);
+                cmd.Parameters.AddWithValue("Password", customerdata.Password);
+                cmd.Parameters.AddWithValue("IBAN", customerdata.IbanNumber);
+
+                cmd.Parameters.AddWithValue("PostalCode", customerdata.PostalCode);
+                cmd.Parameters.AddWithValue("StreetName", customerdata.StreetName);
+                cmd.Parameters.AddWithValue("AdressNumber", customerdata.AdressNumber);
+                cmd.Parameters.AddWithValue("Residence", customerdata.Residence);
+                cmd.Parameters.AddWithValue("Country", customerdata.Country);
+
 
                 //Execute and get Effectedrows
                 int RowsEffected = cmd.ExecuteNonQuery();
@@ -59,7 +63,7 @@ namespace Dorp.Data.Services
             }
         }
         //Update Driver Data in database
-        public void Update(CustomerData CustomerData)
+        public void Update(CustomerData customerdata)
         {
             //Create Connection
             MySqlConnection con = DatabaseConfig.GetConnection();
@@ -68,20 +72,31 @@ namespace Dorp.Data.Services
             try
             {
                 //Build MySQLcommand
-                MySqlCommand cmd = new MySqlCommand("UPDATE `chauffeurs` SET " +
-                    "`voornaam`=FirstName,`tussenvoegsel`=Insertion,`achternaam`=LastName,`soortrijbewijs`=KindLicense,`nationaliteit_rijbewijs`=LicenseNationalitie," +
-                    "`werkdagen`=BusinessDays,`inlognaam`=Username,`wachtwoord`=Password WHERE ID", con);
+                MySqlCommand cmd = new MySqlCommand("UPDATE `klanten` SET " +
+                    "`klant_id`=ID,`voornaam`=FirstName,`tussenvoegsel`=Insertion," +
+                    "`achternaam`=LastName,` geboortedatum`=DayOfBirth,`email`=Email," +
+                    "` telefoonNr`=TelephoneNumber,` postcode`=PostalCode,` straatnaam`=StreetName," +
+                    "` huisNr`=AdressNumber,` plaats`=Residence,` land`=Country," +
+                    "`bedrijf_particulier`=PrivateCompany,` iban_nr`=IBAN," +
+                    "`wachtwoord`=[value-15] WHERE ID", con);
 
                 //Create Parameters
-                cmd.Parameters.AddWithValue("ID", Driverdata.ID);
-                cmd.Parameters.AddWithValue("FirstName", Driverdata.FirstName);
-                cmd.Parameters.AddWithValue("Insertion", Driverdata.Insertion);
-                cmd.Parameters.AddWithValue("LastName", Driverdata.LastName);
-                cmd.Parameters.AddWithValue("KindLicense", Driverdata.KindLicense);
-                cmd.Parameters.AddWithValue("LicenseNationalitie", Driverdata.LicenseNationalitie);
-                cmd.Parameters.AddWithValue("BusinessDays", Driverdata.BusinessDays);
-                cmd.Parameters.AddWithValue("Username", Driverdata.Username);
-                cmd.Parameters.AddWithValue("Password", Driverdata.Password);
+                cmd.Parameters.AddWithValue("ID", customerdata.ID);
+                cmd.Parameters.AddWithValue("FirstName", customerdata.Firstname);
+                cmd.Parameters.AddWithValue("Insertion", customerdata.Insertion);
+                cmd.Parameters.AddWithValue("LastName", customerdata.LastName);
+                cmd.Parameters.AddWithValue("DayOfBirth", customerdata.DayOfBirth);
+                cmd.Parameters.AddWithValue("Email", customerdata.Email);
+                cmd.Parameters.AddWithValue("TelephoneNumber", customerdata.TelephoneNumber);
+                cmd.Parameters.AddWithValue("PrivateCompany", customerdata.CustomerRoll);
+                cmd.Parameters.AddWithValue("Password", customerdata.Password);
+                cmd.Parameters.AddWithValue("IBAN", customerdata.IbanNumber);
+
+                cmd.Parameters.AddWithValue("PostalCode", customerdata.PostalCode);
+                cmd.Parameters.AddWithValue("StreetName", customerdata.StreetName);
+                cmd.Parameters.AddWithValue("AdressNumber", customerdata.AdressNumber);
+                cmd.Parameters.AddWithValue("Residence", customerdata.Residence);
+                cmd.Parameters.AddWithValue("Country", customerdata.Country);
 
                 //Execute and get Effectedrows
                 int RowsEffected = cmd.ExecuteNonQuery();
@@ -106,7 +121,7 @@ namespace Dorp.Data.Services
         }
 
         //Delete a Driver from the database
-        public void Delete(CustomerData CustomerData)
+        public void Delete(CustomerData customerdata)
         {
             //Create Connection
             MySqlConnection con = DatabaseConfig.GetConnection();
@@ -115,10 +130,10 @@ namespace Dorp.Data.Services
             try
             {
                 //Build MySQLcommand
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM `chauffeurs` WHERE ID", con);
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM `klanten` WHERE ID", con);
 
                 //Cretae Parameters
-                cmd.Parameters.AddWithValue("ID", Driverdata.ID);
+                cmd.Parameters.AddWithValue("ID", customerdata.ID);
 
                 //Execute and get Effectedrows
                 int RowsEffected = cmd.ExecuteNonQuery();
@@ -150,7 +165,7 @@ namespace Dorp.Data.Services
             try
             {
                 //Build MySQLcommand
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM `chauffeurs` WHERE ID", con);
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM `klanten` WHERE ID", con);
 
                 //Cretae Parameters
                 cmd.Parameters.AddWithValue("ID", ID);

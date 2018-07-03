@@ -10,6 +10,7 @@ namespace Dorp.Data.DataClasses.Account
 {
     public class CustomerData : LocationData
     {
+        public object ID { get; internal set; }
         internal string Firstname { get; set; }
         internal string Insertion { get; set; }
         internal string LastName { get; set; }
@@ -18,5 +19,6 @@ namespace Dorp.Data.DataClasses.Account
         internal int TelephoneNumber { get; set; }
         internal CustomerRoll CustomerRoll { get; set; }
         internal int IbanNumber { get; set; }
+        internal string Password { get; set; }
     }
 }
